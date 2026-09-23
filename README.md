@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/devissaputra/collaborative_reasoning_analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/collaborative_reasoning_analytics/actions/workflows/ci.yml)
 
+
+**Category:** AI in Education
 **Lightweight NLP for semantic uptake, participation balance, and reasoning moves in group learning.**
 
 > Research prototype. All bundled data and results are synthetic demonstrations. Nothing in this repository should be interpreted as evidence about real learners, teachers, or institutions.
@@ -12,7 +14,7 @@
 
 Collaboration quality is not captured by who spoke most. This repo focuses on whether participants build on one another’s ideas, ask for evidence, challenge claims, and connect reasons to conclusions.
 
-The engineering goal is simple: make the research logic inspectable. Every metric in the demo can be traced back to a small function, the demo data can be regenerated from a fixed seed, and the limitations are stated next to the claims rather than buried at the end.
+The pipeline treats uptake, participation, and reasoning moves as separate signals instead of collapsing collaboration into one score. That makes it easier to inspect why a conversation receives a given summary and where simple NLP proxies break down.
 
 ## Research questions
 
@@ -32,7 +34,7 @@ The reference pipeline follows five stages:
 4. **Participation balance**
 5. **Conversation report**
 
-The current implementation is deliberately compact enough to audit. It is a foundation for a real study, not a theatrical “AI demo.”
+The baseline is deliberately transparent so rule-based measures can later be compared with embedding-based or supervised discourse models.
 
 ## Core outputs
 
