@@ -1,5 +1,7 @@
 # Collaborative Reasoning Analytics
 
+[![CI](https://github.com/devissaputra/collaborative_reasoning_analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/collaborative_reasoning_analytics/actions/workflows/ci.yml)
+
 **Lightweight NLP for semantic uptake, participation balance, and reasoning moves in group learning.**
 
 > Research prototype. All bundled data and results are synthetic demonstrations. Nothing in this repository should be interpreted as evidence about real learners, teachers, or institutions.
