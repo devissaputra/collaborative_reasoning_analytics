@@ -20,7 +20,7 @@ The pipeline treats uptake, participation, and reasoning moves as separate signa
 
 1. How much semantic uptake occurs across adjacent turns?
 2. Is participation distributed or dominated by one speaker?
-3. Which reasoning moves appear, and how are they sequenced?
+3. Which reasoning moves appear most often in the dialogue?
 
 ## What the repository does
 
