@@ -8,7 +8,7 @@ Collaboration quality is not captured by who spoke most. This repo focuses on wh
 
 1. How much semantic uptake occurs across adjacent turns?
 2. Is participation distributed or dominated by one speaker?
-3. Which reasoning moves appear, and how are they sequenced?
+3. Which transparent reasoning-move categories appear most often in the dialogue?
 
 ## Baseline analytic pipeline
 
