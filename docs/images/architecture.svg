@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">Collaborative Reasoning Analytics architecture</title>
+<desc id="desc">Synthetic dialogue turns are tokenized and tagged with transparent rules, then summarized with adjacent-turn lexical uptake, participation balance, and reasoning-move rates.</desc>
+<rect width="1200" height="675" fill="#f8fafc"/>
+<text x="60" y="78" font-family="Arial" font-size="38" font-weight="700" fill="#0f172a">Collaborative Reasoning Analytics · implemented architecture</text>
+<text x="60" y="116" font-family="Arial" font-size="20" fill="#64748b">Transparent descriptive analytics on synthetic dialogue</text>
+<g font-family="Arial" text-anchor="middle">
+<rect x="60" y="215" width="230" height="150" rx="18" fill="#dbeafe" stroke="#60a5fa" stroke-width="2"/><text x="175" y="260" font-size="20" font-weight="700" fill="#1e3a8a">Dialogue turns</text><text x="175" y="302" font-size="17" fill="#334155">speaker · turn · text</text>
+<rect x="350" y="215" width="230" height="150" rx="18" fill="#dcfce7" stroke="#4ade80" stroke-width="2"/><text x="465" y="255" font-size="20" font-weight="700" fill="#166534">Rule-based moves</text><text x="465" y="297" font-size="17" fill="#334155">reasoning · challenge</text><text x="465" y="325" font-size="17" fill="#334155">evidence request</text>
+<rect x="640" y="215" width="230" height="150" rx="18" fill="#ecfeff" stroke="#22d3ee" stroke-width="2"/><text x="755" y="255" font-size="20" font-weight="700" fill="#155e75">Uptake + balance</text><text x="755" y="297" font-size="17" fill="#334155">adjacent-turn Jaccard</text><text x="755" y="325" font-size="17" fill="#334155">speaker entropy</text>
+<rect x="930" y="215" width="210" height="150" rx="18" fill="#f3e8ff" stroke="#c084fc" stroke-width="2"/><text x="1035" y="255" font-size="20" font-weight="700" fill="#6b21a8">Conversation report</text><text x="1035" y="300" font-size="17" fill="#334155">descriptive rates</text>
+</g>
+<g stroke="#64748b" stroke-width="4"><path d="M290 290H350"/><path d="M580 290H640"/><path d="M870 290H930"/></g>
+<rect x="145" y="455" width="910" height="120" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="600" y="500" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#0f172a">Interpretation boundary</text>
+<text x="600" y="538" text-anchor="middle" font-family="Arial" font-size="19" fill="#475569">The current baseline does not model dialogue sequences, delayed dependencies, or causal effects between turns.</text>
+</svg>
