@@ -2,39 +2,38 @@
 
 [![CI](https://github.com/devissaputra/collaborative_reasoning_analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/collaborative_reasoning_analytics/actions/workflows/ci.yml)
 
-
-**Category:** AI in Education
-**Lightweight NLP for semantic uptake, participation balance, and reasoning moves in group learning.**
+**Category:** AI in Education  
+**Lightweight NLP for adjacent-turn uptake, participation balance, and transparent reasoning-move summaries in group dialogue.**
 
 > Research prototype. All bundled data and results are synthetic demonstrations. Nothing in this repository should be interpreted as evidence about real learners, teachers, or institutions.
 
-![Architecture](docs/images/architecture.png)
+![Architecture](docs/images/architecture.svg)
 
 ## Why this project exists
 
-Collaboration quality is not captured by who spoke most. This repo focuses on whether participants build on one another’s ideas, ask for evidence, challenge claims, and connect reasons to conclusions.
+Collaboration quality is not captured by who spoke most. This repository separates several inspectable signals: lexical uptake between adjacent turns, participation balance, and transparent reasoning-move categories such as evidence requests and challenges.
 
-The pipeline treats uptake, participation, and reasoning moves as separate signals instead of collapsing collaboration into one score. That makes it easier to inspect why a conversation receives a given summary and where simple NLP proxies break down.
+The current implementation is deliberately descriptive. It does **not** model dialogue sequences, long-range dependencies, or causal effects between conversational moves.
 
 ## Research questions
 
-1. How much semantic uptake occurs across adjacent turns?
+1. How much lexical uptake occurs across adjacent turns?
 2. Is participation distributed or dominated by one speaker?
-3. Which reasoning moves appear most often in the dialogue?
+3. Which transparent reasoning-move categories appear most often in the dialogue?
 
 ## What the repository does
 
-![Pipeline](docs/images/pipeline.png)
+![Pipeline](docs/images/pipeline.svg)
 
-The reference pipeline follows five stages:
+The implemented pipeline follows five stages:
 
 1. **Dialogue transcript**
-2. **Reasoning move tagging**
-3. **Semantic uptake**
+2. **Rule-based reasoning-move tagging**
+3. **Adjacent-turn lexical uptake**
 4. **Participation balance**
-5. **Conversation report**
+5. **Descriptive conversation report**
 
-The baseline is deliberately transparent so rule-based measures can later be compared with embedding-based or supervised discourse models.
+The baseline is deliberately transparent so these rule-based measures can later be compared with embedding-based or supervised discourse models.
 
 ## Core outputs
 
@@ -44,9 +43,9 @@ The baseline is deliberately transparent so rule-based measures can later be com
 - `evidence_request_rate`
 - `challenge_rate`
 
-![Synthetic demo dashboard](docs/images/demo_dashboard.png)
+![Synthetic demo dashboard](docs/images/demo_dashboard.svg)
 
-The dashboard above is generated from **synthetic data** and is included only to show what the analysis surface looks like. It is not a reported empirical result.
+The dashboard is generated from **synthetic data** and is included only to demonstrate the analysis surface. It does not report sequence effects or empirical learner outcomes.
 
 ## Quick start
 
@@ -69,12 +68,12 @@ docker run --rm collaborative_reasoning_analytics
 
 ```text
 collaborative_reasoning_analytics/
-├── src/collaborative_reasoning_analytics/        # core implementation and synthetic-data generator
-├── examples/demo.py        # end-to-end reproducible demo
-├── tests/                  # executable unit tests
-├── docs/                   # research design, data dictionary, references
-│   └── images/             # original project diagrams and demo visualisations
-├── results/                # synthetic demo outputs only
+├── src/collaborative_reasoning_analytics/  # core implementation and synthetic-data generator
+├── examples/demo.py                        # end-to-end reproducible demo
+├── tests/                                  # executable unit tests
+├── docs/                                   # research design, data dictionary, references
+│   └── images/                             # auditable project diagrams
+├── results/                                # synthetic demo outputs only
 ├── config/default.yaml
 ├── Dockerfile
 ├── Makefile
@@ -100,16 +99,18 @@ The fuller design rationale is in [`docs/research_design.md`](docs/research_desi
 - Lexical overlap is only a rough proxy for conceptual uptake.
 - Rule-based move labels are transparent baselines, not validated discourse annotations.
 - Conversation metrics should support reflection, not rank individual students.
+- The current baseline does not implement sequence analysis.
 
 ## Strong next experiments
 
 - Fine-tune a discourse-move classifier with inter-rater reliability reporting.
 - Add embedding-based uptake and delayed cross-turn references.
+- Add explicit sequence models only with a clearly defined temporal research question.
 - Visualize group-level reasoning networks over time.
 
 ## References
 
-See [`docs/references.md`](docs/references.md). The references are there to locate the project in current AIED, learning-analytics, human-centered AI, and instructional-design research. They do **not** imply endorsement or affiliation.
+See [`docs/references.md`](docs/references.md). The references locate the project in current AIED, learning-analytics, human-centered AI, and instructional-design research. They do **not** imply endorsement or affiliation.
 
 ## Citation
 
