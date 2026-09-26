@@ -1,3 +1,7 @@
+# Calculation reading guide: ../CALCULATIONS.md (repository root).
+# Uptake proxy = |tokens(previous) ∩ tokens(current)| / |union|.
+# This is lexical overlap, not semantic understanding. Participation entropy is normalized by the number of observed speakers. Turn order must belong to one conversation; mixing conversations would create invalid adjacency.
+
 from __future__ import annotations
 import re, math, pandas as pd
 

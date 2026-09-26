@@ -1,0 +1,49 @@
+{
+  "question": "How can dialogue participation and uptake be inspected?",
+  "data": "Synthetic ordered dialogue turns and speaker identities.",
+  "method": "Lexical move rules; adjacent-turn token overlap; normalized speaker entropy.",
+  "formula": "Uptake proxy = |tokens(previous) ∩ tokens(current)| / |union|.",
+  "interpretation": "This is lexical overlap, not semantic understanding. Participation entropy is normalized by the number of observed speakers. Turn order must belong to one conversation; mixing conversations would create invalid adjacency.",
+  "status": "SYNTHETIC / RULE-BASED PROTOTYPE | no educational validity claim",
+  "source": "results/demo_metrics.json",
+  "rows": [
+    {
+      "label": "mean_uptake",
+      "path": [
+        "mean_uptake"
+      ],
+      "unit": "unitless"
+    },
+    {
+      "label": "participation_balance",
+      "path": [
+        "participation_balance"
+      ],
+      "unit": "unitless"
+    },
+    {
+      "label": "reasoning_move_rate",
+      "path": [
+        "reasoning_move_rate"
+      ],
+      "unit": "unitless"
+    },
+    {
+      "label": "evidence_request_rate",
+      "path": [
+        "evidence_request_rate"
+      ],
+      "unit": "unitless"
+    },
+    {
+      "label": "challenge_rate",
+      "path": [
+        "challenge_rate"
+      ],
+      "unit": "unitless"
+    }
+  ],
+  "table_title": "Selected recorded values (units and context shown)",
+  "evidence_note": "See CALCULATIONS.md for data status, execution scope and interpretation.",
+  "finding": "This dialogue-analysis prototype combines transparent move labels, adjacent-turn lexical overlap, and speaker-participation balance on synthetic conversations. Its measures help inspect a coding workflow, but shared words do not prove conceptual uptake and balanced turn counts do not prove equitable reasoning. The repository presents these quantities as descriptive proxies awaiting human annotation and validation."
+}
